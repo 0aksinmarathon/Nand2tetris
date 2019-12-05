@@ -1,0 +1,55 @@
+CHIP Xor16 {
+    IN a[16], b;
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+Nand(a=a[0], b=b, out=abnand0);
+Or(a=a[0], b=b, out=abor0);
+And(a=abnand0, b=abor0, out=out[0]);
+Nand(a=a[1], b=b, out=abnand1);
+Or(a=a[1], b=b, out=abor1);
+And(a=abnand1, b=abor1, out=out[1]);
+Nand(a=a[2], b=b, out=abnand2);
+Or(a=a[2], b=b, out=abor2);
+And(a=abnand2, b=abor2, out=out[2]);
+Nand(a=a[3], b=b, out=abnand3);
+Or(a=a[3], b=b, out=abor3);
+And(a=abnand3, b=abor3, out=out[3]);
+Nand(a=a[4], b=b, out=abnand4);
+Or(a=a[4], b=b, out=abor4);
+And(a=abnand4, b=abor4, out=out[4]);
+Nand(a=a[5], b=b, out=abnand5);
+Or(a=a[5], b=b, out=abor5);
+And(a=abnand5, b=abor5, out=out[5]);
+Nand(a=a[6], b=b, out=abnand6);
+Or(a=a[6], b=b, out=abor6);
+And(a=abnand6, b=abor6, out=out[6]);
+Nand(a=a[7], b=b, out=abnand7);
+Or(a=a[7], b=b, out=abor7);
+And(a=abnand7, b=abor7, out=out[7]);
+Nand(a=a[8], b=b, out=abnand8);
+Or(a=a[8], b=b, out=abor8);
+And(a=abnand8, b=abor8, out=out[8]);
+Nand(a=a[9], b=b, out=abnand9);
+Or(a=a[9], b=b, out=abor9);
+And(a=abnand9, b=abor9, out=out[9]);
+Nand(a=a[10], b=b, out=abnand10);
+Or(a=a[10], b=b, out=abor10);
+And(a=abnand10, b=abor10, out=out[10]);
+Nand(a=a[11], b=b, out=abnand11);
+Or(a=a[11], b=b, out=abor11);
+And(a=abnand11, b=abor11, out=out[11]);
+Nand(a=a[12], b=b, out=abnand12);
+Or(a=a[12], b=b, out=abor12);
+And(a=abnand12, b=abor12, out=out[12]);
+Nand(a=a[13], b=b, out=abnand13);
+Or(a=a[13], b=b, out=abor13);
+And(a=abnand13, b=abor13, out=out[13]);
+Nand(a=a[14], b=b, out=abnand14);
+Or(a=a[14], b=b, out=abor14);
+And(a=abnand14, b=abor14, out=out[14]);
+Nand(a=a[15], b=b, out=abnand15);
+Or(a=a[15], b=b, out=abor15);
+And(a=abnand15, b=abor15, out=out[15]);
+}

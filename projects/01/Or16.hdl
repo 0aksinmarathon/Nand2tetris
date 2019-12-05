@@ -1,0 +1,66 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/Or16.hdl
+
+/**
+ * 16-bit bitwise Or:
+ * for i = 0..15 out[i] = (a[i] or b[i])
+ */
+
+CHIP Or16 {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+
+    Not(in=a[0], out=an0);
+    Not(in=b[0], out=bn0);
+    Nand(a=an0, b=bn0, out=out[0]);
+    Not(in=a[1], out=an1);
+    Not(in=b[1], out=bn1);
+    Nand(a=an1, b=bn1, out=out[1]);
+    Not(in=a[2], out=an2);
+    Not(in=b[2], out=bn2);
+    Nand(a=an2, b=bn2, out=out[2]);
+    Not(in=a[3], out=an3);
+    Not(in=b[3], out=bn3);
+    Nand(a=an3, b=bn3, out=out[3]);
+    Not(in=a[4], out=an4);
+    Not(in=b[4], out=bn4);
+    Nand(a=an4, b=bn4, out=out[4]);
+    Not(in=a[5], out=an5);
+    Not(in=b[5], out=bn5);
+    Nand(a=an5, b=bn5, out=out[5]);
+    Not(in=a[6], out=an6);
+    Not(in=b[6], out=bn6);
+    Nand(a=an6, b=bn6, out=out[6]);
+    Not(in=a[7], out=an7);
+    Not(in=b[7], out=bn7);
+    Nand(a=an7, b=bn7, out=out[7]);
+    Not(in=a[8], out=an8);
+    Not(in=b[8], out=bn8);
+    Nand(a=an8, b=bn8, out=out[8]);
+    Not(in=a[9], out=an9);
+    Not(in=b[9], out=bn9);
+    Nand(a=an9, b=bn9, out=out[9]);
+    Not(in=a[10], out=an10);
+    Not(in=b[10], out=bn10);
+    Nand(a=an10, b=bn10, out=out[10]);
+    Not(in=a[11], out=an11);
+    Not(in=b[11], out=bn11);
+    Nand(a=an11, b=bn11, out=out[11]);
+    Not(in=a[12], out=an12);
+    Not(in=b[12], out=bn12);
+    Nand(a=an12, b=bn12, out=out[12]);
+    Not(in=a[13], out=an13);
+    Not(in=b[13], out=bn13);
+    Nand(a=an13, b=bn13, out=out[13]);
+    Not(in=a[14], out=an14);
+    Not(in=b[14], out=bn14);
+    Nand(a=an14, b=bn14, out=out[14]);
+    Not(in=a[15], out=an15);
+    Not(in=b[15], out=bn15);
+    Nand(a=an15, b=bn15, out=out[15]);
+}

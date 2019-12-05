@@ -1,0 +1,98 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/Mux16.hdl
+
+/**
+ * 16-bit multiplexor:
+ * for i = 0..15 out[i] = a[i] if sel == 0
+ *                        b[i] if sel == 1
+ */
+
+CHIP Mux16 {
+    IN a[16], b[16], sel;
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+    Not(in=sel, out=nsel0);
+    Or(a=a[0], b=sel, out=aor0);
+    Or(a=b[0], b=nsel0, out=bor0);
+    Xor(a=aor0, b=bor0, out=nout0);
+    Not(in=nout0, out=out[0]);
+    Not(in=sel, out=nsel1);
+    Or(a=a[1], b=sel, out=aor1);
+    Or(a=b[1], b=nsel1, out=bor1);
+    Xor(a=aor1, b=bor1, out=nout1);
+    Not(in=nout1, out=out[1]);
+    Not(in=sel, out=nsel2);
+    Or(a=a[2], b=sel, out=aor2);
+    Or(a=b[2], b=nsel2, out=bor2);
+    Xor(a=aor2, b=bor2, out=nout2);
+    Not(in=nout2, out=out[2]);
+    Not(in=sel, out=nsel3);
+    Or(a=a[3], b=sel, out=aor3);
+    Or(a=b[3], b=nsel3, out=bor3);
+    Xor(a=aor3, b=bor3, out=nout3);
+    Not(in=nout3, out=out[3]);
+    Not(in=sel, out=nsel4);
+    Or(a=a[4], b=sel, out=aor4);
+    Or(a=b[4], b=nsel4, out=bor4);
+    Xor(a=aor4, b=bor4, out=nout4);
+    Not(in=nout4, out=out[4]);
+    Not(in=sel, out=nsel5);
+    Or(a=a[5], b=sel, out=aor5);
+    Or(a=b[5], b=nsel5, out=bor5);
+    Xor(a=aor5, b=bor5, out=nout5);
+    Not(in=nout5, out=out[5]);
+    Not(in=sel, out=nsel6);
+    Or(a=a[6], b=sel, out=aor6);
+    Or(a=b[6], b=nsel6, out=bor6);
+    Xor(a=aor6, b=bor6, out=nout6);
+    Not(in=nout6, out=out[6]);
+    Not(in=sel, out=nsel7);
+    Or(a=a[7], b=sel, out=aor7);
+    Or(a=b[7], b=nsel7, out=bor7);
+    Xor(a=aor7, b=bor7, out=nout7);
+    Not(in=nout7, out=out[7]);
+    Not(in=sel, out=nsel8);
+    Or(a=a[8], b=sel, out=aor8);
+    Or(a=b[8], b=nsel8, out=bor8);
+    Xor(a=aor8, b=bor8, out=nout8);
+    Not(in=nout8, out=out[8]);
+    Not(in=sel, out=nsel9);
+    Or(a=a[9], b=sel, out=aor9);
+    Or(a=b[9], b=nsel9, out=bor9);
+    Xor(a=aor9, b=bor9, out=nout9);
+    Not(in=nout9, out=out[9]);
+    Not(in=sel, out=nsel10);
+    Or(a=a[10], b=sel, out=aor10);
+    Or(a=b[10], b=nsel10, out=bor10);
+    Xor(a=aor10, b=bor10, out=nout10);
+    Not(in=nout10, out=out[10]);
+    Not(in=sel, out=nsel11);
+    Or(a=a[11], b=sel, out=aor11);
+    Or(a=b[11], b=nsel11, out=bor11);
+    Xor(a=aor11, b=bor11, out=nout11);
+    Not(in=nout11, out=out[11]);
+    Not(in=sel, out=nsel12);
+    Or(a=a[12], b=sel, out=aor12);
+    Or(a=b[12], b=nsel12, out=bor12);
+    Xor(a=aor12, b=bor12, out=nout12);
+    Not(in=nout12, out=out[12]);
+    Not(in=sel, out=nsel13);
+    Or(a=a[13], b=sel, out=aor13);
+    Or(a=b[13], b=nsel13, out=bor13);
+    Xor(a=aor13, b=bor13, out=nout13);
+    Not(in=nout13, out=out[13]);
+    Not(in=sel, out=nsel14);
+    Or(a=a[14], b=sel, out=aor14);
+    Or(a=b[14], b=nsel14, out=bor14);
+    Xor(a=aor14, b=bor14, out=nout14);
+    Not(in=nout14, out=out[14]);
+    Not(in=sel, out=nsel15);
+    Or(a=a[15], b=sel, out=aor15);
+    Or(a=b[15], b=nsel15, out=bor15);
+    Xor(a=aor15, b=bor15, out=nout15);
+    Not(in=nout15, out=out[15]);
+}
